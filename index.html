@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C*zinho em Dezembro ?</title>
+</head>
+<style>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+  }
+
+  button,
+  .yes {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .nop {
+    position: absolute;
+    left: 50%;
+    top: 58%;
+  }
+
+  .yes {
+    position: absolute;
+    left: 45%;
+    top: 58%;
+  }
+</style>
+
+<body>
+  <div class="box">
+    <h2>Cuzinho em Dezembro ?</h2>
+    <div>
+      <a target="_blank" href="https://www.youtube.com/watch?v=tHRCSQQ_9Bk" class="yes">Sim</a>
+      <button class="nop">Não</button>
+    </div>
+  </div>
+</body>
+
+<script>
+  const button = document.querySelector(".nop");
+
+  button.addEventListener("mouseover", () => {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    const buttonWidth = button.offsetWidth;
+    const buttonHeight = button.offsetHeight;
+    const randomX = Math.floor(Math.random() * (screenWidth - buttonWidth));
+    const randomY = Math.floor(Math.random() * (screenHeight - buttonHeight));
+
+    button.style.left = `${randomX}px`;
+    button.style.top = `${randomY}px`;
+  });
+
+</script>
+
+</html>
